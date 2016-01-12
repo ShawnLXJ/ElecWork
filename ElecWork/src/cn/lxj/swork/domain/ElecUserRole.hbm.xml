@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE hibernate-mapping PUBLIC "
+    -//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.lxj.swork.domain.ElecUserRole"  table="elec_user_role">
+		<id name="seqId" type="integer">
+			<column name="seqId"  not-null="true"/>
+			<generator class="increment"/>
+		</id>
+		
+		<property name="userId" type="string">
+			<column name="userId" sql-type="varchar(50)"/>
+		</property>
+		
+		<property name="roleId" type="string">
+			<column name="roleId" sql-type="varchar(50)"/>
+		</property>
+		<property name="remark" type="string">
+			<column name="remark" sql-type="varchar(500)"/>
+		</property>
+	</class>
+
+</hibernate-mapping>

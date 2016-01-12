@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE hibernate-mapping PUBLIC "
+    -//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.lxj.swork.domain.ElecUser"  table="Elec_User">
+    
+        <id name="userId" type="string">
+            <column name="userId"  not-null="true"/>
+            <generator class="uuid"/>
+        </id>
+        
+        <property name="jctId" type="string">
+            <column name="jctId" />
+        </property>
+        
+        <property name="userName" type="string">
+            <column name="userName" />
+        </property>
+        
+        <property name="loginName" type="string">
+            <column name="loginName" />
+        </property>
+        
+        <property name="loginPwd" type="string">
+            <column name="loginPwd" />
+        </property>
+        
+        <property name="sexId" type="string">
+            <column name="sexId" />
+        </property>
+        
+        <property name="address" type="string">
+            <column name="address" />
+        </property>
+        
+        <property name="contactTel" type="string">
+            <column name="contactTel" />
+        </property>
+        
+        <property name="birthday" type="date">
+            <column name="birthday" length="50"/>
+        </property>
+        
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        
+        <property name="mobile" type="string">
+            <column name="mobile" />
+        </property>
+        
+        <property name="isDuty" type="string">
+            <column name="isDuty" />
+        </property>
+        
+        <property name="onDutydate" type="date">
+            <column name="onDutydate" length="50"/>
+        </property>
+        
+        <property name="offDutydate" type="date">
+            <column name="offDutydate" length="50"/>
+        </property>
+        
+        <property name="remark" type="string">
+            <column name="remark" />
+        </property>
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE hibernate-mapping PUBLIC "
+    -//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.lxj.swork.domain.ElecLog"  table="elec_log">
+		<id name="logId" type="string">
+			<column name="logId" sql-type="varchar(50)" not-null="true"/>
+			<generator class="uuid"/>
+		</id>
+		
+		<property name="ipAddress" type="string">
+			<column name="ipAddress" sql-type="varchar(50)"/>
+		</property>
+		
+		<property name="opeName" type="string">
+			<column name="opeName" sql-type="varchar(50)"/>
+		</property>
+		
+		<property name="opeTime" type="date">
+			<column name="opeTime"  length="50"/>
+		</property>
+		
+		<property name="details" type="string">
+            <column name="details" sql-type="varchar(50)"/>
+        </property>
+	</class>
+
+</hibernate-mapping>

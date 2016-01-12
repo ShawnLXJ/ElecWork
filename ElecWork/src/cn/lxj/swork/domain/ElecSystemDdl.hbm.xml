@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE hibernate-mapping PUBLIC "
+    -//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.lxj.swork.domain.ElecSystemDdl"  table="elec_systemddl">
+		<id name="seqId" type="integer">
+			<column name="seqId" not-null="true"/>
+			<generator class="increment"/>
+		</id>
+		
+		<property name="keyWord" type="string">
+			<column name="keyWord" sql-type="varchar(50)"/>
+		</property>
+		
+		<property name="ddlCode" type="integer">
+			<column name="ddlCode" />
+		</property>
+		<property name="ddlName" type="string">
+			<column name="ddlName" sql-type="varchar(500)"/>
+		</property>
+	</class>
+
+</hibernate-mapping>
